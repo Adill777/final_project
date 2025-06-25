@@ -1,0 +1,63 @@
+🛡️ Web Application Vulnerability Scanner
+=========================================
+
+This is a simple Python-based vulnerability scanner that detects common security issues in web forms like Cross-Site Scripting (XSS) and SQL Injection (SQLi). It crawls a target website, locates all HTML forms, injects test payloads, and checks for reflections or vulnerable responses.
+
+Key Features:
+-------------
+- 🔍 Automatically discovers forms on the target page
+- 💉 Tests for:
+  - Cross-Site Scripting (XSS)
+  - SQL Injection (SQLi)
+- 🧠 Uses basic payloads for proof-of-concept detection
+- 🌐 Uses `requests` and `BeautifulSoup` for HTTP and parsing
+- 🚫 Gracefully handles connection and parsing errors
+
+Requirements:
+-------------
+- Python 3.6+
+- requests
+- beautifulsoup4
+
+Install Requirements:
+---------------------
+pip install requests beautifulsoup4
+
+How to Use:
+-----------
+1. Clone or download the repository.
+2. Navigate to the project directory.
+3. Run the scanner script:
+
+   python scanner.py
+
+4. Input the target URL when prompted (e.g., http://testphp.vulnweb.com).
+
+Sample Output:
+--------------
+[+] Found 2 forms on http://example.com
+
+[>] Testing XSS on http://example.com/login.php
+[!] XSS Vulnerability Found on http://example.com/login.php
+
+[>] Testing SQLI on http://example.com/login.php
+[-] No SQLI vulnerability on http://example.com/login.php
+
+Project Structure:
+------------------
+web-vuln-scanner/
+├── scanner.py
+├── README.md
+└── requirements.txt (optional)
+
+Project Report:
+---------------
+A 2-page report in PDF format is included in the repository under the name WebVulnScanner_Report.pdf. It explains:
+- Introduction & Abstract
+- Tools Used
+- Steps Taken
+- Conclusion
+
+Legal Disclaimer:
+-----------------
+This tool is intended for educational and ethical use only. Do not use it on websites without proper authorization. Unauthorized testing is illegal and unethical.
